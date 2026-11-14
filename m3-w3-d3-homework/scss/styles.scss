@@ -1,0 +1,94 @@
+/* Variables */
+@import "colors";
+
+/* Import nav */
+@import "nav";
+
+/* Mixin for button */
+@mixin button($bg-color, $hover-color) {
+    background-color: $bg-color;
+    color: $color-white;
+    border: 0;
+    padding: 0.8em 1.4em;
+    font-family: $font-main;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+
+    &:active {
+        background-color: $color-blue;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: $font-main;
+    color: $color-dark;
+}
+
+/* Nest Main */
+main {
+    width: 1350px;
+    min-height: 535px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 15px;
+    background-color: $color-white;
+    border-left: 10px solid $color-gold;
+    border-right: 10px solid $color-gold;
+
+    #intro-text {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: $color-grey;
+
+        span {
+            font-family: $font-script;
+            font-size: 2.2rem;
+        }
+
+        h3 {
+            margin: 1.2em 0 1em;
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin: 0 0 1.8em;
+            font-size: 0.9rem;
+        }
+
+        // Mixin for button
+        button {
+            @include button($color-gold, $color-green);
+        }
+    }
+
+    #intro-image {
+        position: relative;
+        width: 60%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+footer {
+    width: $page-width;
+    box-sizing: border-box;
+    padding: 15px 40px;
+    background-color: $color-gold;
+    font-size: 0.8rem;
+}

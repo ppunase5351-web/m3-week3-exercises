@@ -1,0 +1,28 @@
+/* Nest Nav */
+/* Variables: colors */
+/* Variables: fonts */
+/* Variable: page width */
+header {
+  width: 1350px;
+  background-color: rgb(218, 170, 14);
+}
+header nav ul {
+  display: flex;
+  margin: 0;
+  padding: 15px 40px;
+  list-style: none;
+}
+header nav ul li {
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  margin-right: 0.5em;
+}
+header nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  color: rgb(170, 240, 113);
+}
+
+/*# sourceMappingURL=nav.css.map */
