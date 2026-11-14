@@ -1,13 +1,22 @@
+// @import: bring in the color variables from colors.scss
+@import "colors";
 
+// @mixin: reusable block that centers content in a panel
+@mixin center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 //Global
 * {
-    color: ;
+    color: $color-white;
     font-size: 1.2rem;
 }
 
 .container {
-    background-color: ;
+    background-color: $color-yellow;
     border: 1px solid #000;
     display: flex;
     height: 500px;
@@ -17,21 +26,23 @@
     width: 50%;
 
     .left {
-        background-color: ;
+        @include center-content;
+        background-color: $color-dark-green;
         height: 100%;
         width: 69%;
         position: relative;
     }
 
     .right {
-        background-color: ;
+        @include center-content;
+        background-color: $color-light-green;
         height: 100%;
         position: relative;
         width: 29%;
 
         .button {
-            background-color: ;
-            color: ;
+            background-color: $color-lime;
+            color: $color-dark-green;
             border: 0;
             border-radius: 10px;
             cursor: pointer;
